@@ -8,10 +8,23 @@
     <artifactId>mysql-binlog-connector-extension</artifactId>
     <version>2.3.x.20240823.RELEASE</version>
     <packaging>jar</packaging>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
     <properties>
+
+        <!-- ═══ 第一段: 基础属性（自然排序）═══ -->
+        <java.version>1.8</java.version>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+        <maven.version>3.9.16</maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>17</java.version>
+        <!-- Dependency versions -->
+
+
         <canal.version>1.1.7</canal.version>
         <spring-framework.version>5.2.15.RELEASE</spring-framework.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
@@ -21,88 +34,9 @@
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
         <lombok.version>1.18.30</lombok.version>
         <slf4j.version>1.7.32</slf4j.version>
+        <!-- Maven Plugin versions -->
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
-
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-<scm>
-        <connection>scm:git:https://github.com/easy-4-java/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:https://github.com/easy-4-java/${project.artifactId}.git</developerConnection>
-        <url>https://github.com/easy-4-java/${project.artifactId}</url>
-        <tag>${project.artifactId}</tag>
-    </scm>
-
-<developers>
-        <developer>
-            <name>Loong Wan</name>
-            <email>hiwepy@gmail.com</email>
-            <url>https://github.com/loong10k</url>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
-
-<dependencies>
-        <dependency>
-            <groupId>com.alibaba.otter</groupId>
-            <artifactId>canal.client</artifactId>
-            <version>${canal.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.otter</groupId>
-            <artifactId>canal.protocol</artifactId>
-            <version>${canal.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring-framework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-core</artifactId>
-            <version>${mybatis-plus.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>${commons-beanutils.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>${commons-lang.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>transmittable-thread-local</artifactId>
-            <version>${transmittable-thread-local.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
@@ -118,4 +52,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
