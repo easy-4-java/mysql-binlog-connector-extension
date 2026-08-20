@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
     <modelVersion>4.1.0</modelVersion>
     <groupId>io.github.easy4j</groupId>
     <artifactId>mysql-binlog-connector-extension</artifactId>
-    <version>2.3.x.20240823.RELEASE</version>
+    <version>3.0.x.20260630-SNAPSHOT</version>
     <packaging>jar</packaging>
     <licenses>
         <license>
@@ -29,12 +29,12 @@
         </developer>
     </developers>
     <properties>
-        <!-- ═══ 第一段: 基础属性（自然排序）═══ -->
+        
         <java.version>21</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven.version>4.0.0-rc-5</maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Dependency versions -->
+        
         <canal.version>1.1.7</canal.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-lang.version>2.6</commons-lang.version>
@@ -44,7 +44,7 @@
         <slf4j.version>1.7.32</slf4j.version>
         <spring-framework.version>5.2.15.RELEASE</spring-framework.version>
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
-        <!-- Maven Plugin versions -->
+        
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
     <dependencies>
